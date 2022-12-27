@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Floats from "../components/Floats"
 import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
 
@@ -11,8 +12,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <Hero />
+      <main className="px-6 md:px-[10%]">
+        <Navbar />
+        <Hero />
+        <Floats />
+      </main>
     </>
   )
 }

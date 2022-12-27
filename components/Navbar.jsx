@@ -1,8 +1,9 @@
 import React, { useState } from "react"
-import Image from "next/image"
+// import Image from "next/image"
 import Link from "next/link"
 import { AiOutlineClose, AiOutlineMail, AiOutlineTwitter } from "react-icons/ai"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
+import { BsMoonStars } from "react-icons/bs"
 import { TbMenu2 } from "react-icons/tb"
 
 const Navbar = () => {
@@ -11,41 +12,36 @@ const Navbar = () => {
     setNav(!nav)
   }
   return (
-    <div className="sticky w-full h-20 ">
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Image
-          src="/../public/assets/navLogo.png"
-          alt="/"
-          width="110"
-          height="90"
-        />
+    <div className="sticky w-full h-20 z-50">
+      <div className="flex justify-between items-center w-full h-full  ">
         <div>
           <ul className="hidden md:flex">
             <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:text-[#686868]">
+              <li className="mr-10 text-sm uppercase text-gray-600 hover:border-b">
                 Home
               </li>
             </Link>
             <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:text-[#686868]">
+              <li className="mr-10 text-sm uppercase text-gray-600 hover:border-b">
                 Skills
               </li>
             </Link>
             <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:text-[#686868]">
+              <li className="mr-10 text-sm uppercase text-gray-600 hover:border-b">
                 Projects
               </li>
             </Link>
             <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:text-[#686868]">
+              <li className="mr-10 text-sm uppercase text-gray-600 hover:border-b">
                 Contact
               </li>
             </Link>
           </ul>
-          <div onClick={handleNav} className="md:hidden">
+          <div onClick={handleNav} className="md:hidden text-gray-600">
             <TbMenu2 size={25} />
           </div>
         </div>
+        <BsMoonStars size={20} color="#7a7a7a" />
       </div>
       <div
         className={
@@ -63,13 +59,10 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between pb-5">
-              <Image
-                src="/../public/assets/navLogo.png"
-                alt="/"
-                width="85"
-                height="75"
-              />
-              <div onClick={handleNav} className=" cursor-pointer">
+              <div
+                onClick={handleNav}
+                className="cursor-pointer pt-2 text-gray-600"
+              >
                 <AiOutlineClose />
               </div>
             </div>
