@@ -1,7 +1,9 @@
 import Head from "next/head"
-import Floats from "../components/Floats"
+// import About from "../components/About"
+// import Floats from "../components/Floats"
 import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
+import Skills from "../components/Skills"
 
 export default function Home() {
   return (
@@ -15,7 +17,9 @@ export default function Home() {
       <main className="px-6 md:px-[10%]">
         <Navbar />
         <Hero />
-        <Floats />
+        {/* <Floats className="fixed" /> */}
+        {/* <About /> */}
+        <Skills />
       </main>
     </>
   )

@@ -1,5 +1,7 @@
 import React from "react"
 import Image from "next/image"
+import { FaGithub, FaLinkedinIn } from "react-icons/fa"
+import { AiOutlineTwitter } from "react-icons/ai"
 
 const Hero = () => {
   return (
@@ -36,6 +38,17 @@ const Hero = () => {
       </div>
       <div className="p-1 mt-2 md:pt-4">
         <button className="p-2 text-sm md:text-md md:p-3">Get in Touch</button>
+      </div>
+      <div className="flex items-center justify-start max-w-[330px] sm:m-auto py-2 mt-2 lg:mt-14 md:pt-6 ">
+        <div className="my-2 rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-105 ease-in duration-300 hover:text-blue-700">
+          <FaLinkedinIn />
+        </div>
+        <div className="my-2 rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-105 ease-in duration-300 hover:text-blue-700">
+          <FaGithub />
+        </div>
+        <div className="my-2 rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-105 ease-in duration-300 hover:text-blue-700">
+          <AiOutlineTwitter />
+        </div>
       </div>
     </div>
   )
