@@ -8,6 +8,7 @@ import { TbMenu2 } from "react-icons/tb"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
+
   const handleNav = () => {
     setNav(!nav)
   }
@@ -21,17 +22,17 @@ const Navbar = () => {
                 Home
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/#skills">
               <li className="mr-10 text-sm uppercase text-gray-600 hover:border-b">
                 Skills
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/#projects">
               <li className="mr-10 text-sm uppercase text-gray-600 hover:border-b">
                 Projects
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/#contact">
               <li className="mr-10 text-sm uppercase text-gray-600 hover:border-b">
                 Contact
               </li>
@@ -76,25 +77,37 @@ const Navbar = () => {
           <div>
             <ul className="uppercase pt-2">
               <Link href="/">
-                <li className="py-4 text-sm pl-2 text-[#686868] active:text-black">
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm pl-2 text-[#686868] active:text-black"
+                >
                   Home
                 </li>
               </Link>
 
-              <Link href="/">
-                <li className="py-4 text-sm pl-2 text-[#686868] active:text-black">
+              <Link href="/#skills">
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm pl-2 text-[#686868] active:text-black"
+                >
                   Skills
                 </li>
               </Link>
 
-              <Link href="/">
-                <li className="py-4 text-sm pl-2 text-[#686868] active:text-black">
+              <Link href="/#projects">
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm pl-2 text-[#686868] active:text-black"
+                >
                   Projects
                 </li>
               </Link>
 
-              <Link href="/">
-                <li className="py-4 text-sm pl-2 text-[#686868] active:text-black">
+              <Link href="/#contact">
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm pl-2 text-[#686868] active:text-black"
+                >
                   Contact
                 </li>
               </Link>

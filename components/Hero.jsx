@@ -2,10 +2,14 @@ import React from "react"
 import Image from "next/image"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import { AiOutlineTwitter } from "react-icons/ai"
+import Avatar from "../public/assets/tushar.png"
 
 const Hero = () => {
   return (
-    <div className="flex flex-col justify-center items-start max-w-6xl border-gray-200 mx-auto py-8 sm:pt-[10%] lg:pt-[15%] relative">
+    <div
+      id="home"
+      className="flex flex-col justify-center items-start max-w-6xl border-gray-200 mx-auto py-8 sm:pt-[10%] lg:pt-[15%] relative"
+    >
       <p className="text-lg md:text-2xl text-gray-500 pl-3 md:pl-3  pb-6 md:pb-8">
         Hey!👋
       </p>
@@ -19,7 +23,7 @@ const Hero = () => {
             Frontend Developer{" "}
           </h2>
           <p className="text-gray-500 lg:text-xl mb-2 sm:w-[93%]">
-            A JavaScript Developer that focuses on Front-end with{" "}
+            I use JavaScript to focus on Front-end with{" "}
             <span className="font-semibold">React/NextJs</span>. To build fast
             and responsive web.
           </p>
@@ -27,7 +31,7 @@ const Hero = () => {
         </div>
         <div className="w-[85px] sm:w-[176px] md:w-[250px] relative  sm:mb-0 mr-auto">
           <Image
-            src="/../public/assets/tushar.png"
+            src={Avatar}
             alt="/"
             width="150"
             height="150"
