@@ -1,4 +1,5 @@
 import Head from "next/head"
+import { useState } from "react"
 import Contact from "../components/Contact"
 import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"

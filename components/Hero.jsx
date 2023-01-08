@@ -3,6 +3,7 @@ import Image from "next/image"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import { AiOutlineTwitter } from "react-icons/ai"
 import Avatar from "../public/assets/tushar.png"
+import Link from "next/link"
 
 const Hero = () => {
   return (
@@ -41,17 +42,39 @@ const Hero = () => {
         </div>
       </div>
       <div className="p-1 mt-2 md:pt-4">
-        <button className="p-2 text-sm md:text-md md:p-3">Get in Touch</button>
+        <Link href="/#contact">
+          <button className="p-2 text-sm md:text-md md:p-3">
+            Get in Touch
+          </button>
+        </Link>
       </div>
       <div className="flex items-center justify-start max-w-[330px] sm:m-auto py-2 mt-2 lg:mt-14 md:pt-6 ">
         <div className="my-2 rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-105 ease-in duration-300 hover:text-blue-700">
-          <FaLinkedinIn />
+          <a
+            href="https://www.linkedin.com/in/tushar-rajput17/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedinIn />
+          </a>
         </div>
         <div className="my-2 rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-105 ease-in duration-300 hover:text-blue-700">
-          <FaGithub />
+          <a
+            href="https://github.com/Tushar-017"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
+          </a>
         </div>
         <div className="my-2 rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-105 ease-in duration-300 hover:text-blue-700">
-          <AiOutlineTwitter />
+          <a
+            href="https://twitter.com/RR_ajput"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiOutlineTwitter />
+          </a>
         </div>
       </div>
     </div>
