@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
+import emailjs from "@emailjs/browser"
 import { AiOutlineMail } from "react-icons/ai"
 import { BsFillPersonLinesFill } from "react-icons/bs"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
@@ -8,6 +9,38 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi"
 import ContactImg from "../public/assets/contact.jpg"
 
 const Contact = () => {
+  const form = useRef()
+  const initialState = {
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+  }
+  const [formData, setFormData] = useState(initialState)
+
+  const handleChange = (e) => {
+    setFormData({ [e.target.name]: e.target.value })
+  }
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        "service_jqr2m2g",
+        "template_55hsmxm",
+        form.current,
+        "Ur5TBik9S4KuRMUEZ"
+      )
+      .then(
+        () => alert("Massage sent! Successfully"),
+        (error) => {
+          alert(error.text)
+        }
+      )
+      .then(setFormData(initialState))
+  }
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
@@ -60,9 +93,6 @@ const Contact = () => {
                     </div>
                   </a>
 
-                  <div className="rounded-full shadow-lg shadow-gray-300 p-5 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <AiOutlineMail />
-                  </div>
                   <Link href="/resume">
                     <a>
                       <div className="rounded-full shadow-lg shadow-gray-300 p-5 cursor-pointer hover:scale-110 ease-in duration-300">
@@ -78,11 +108,7 @@ const Contact = () => {
           {/* right */}
           <div className="col-span-3 w-full h-auto shadow-md shadow-gray-300 rounded-xl lg:p-4">
             <div className="p-4">
-              <form
-                action="https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060"
-                method="POST"
-                encType="multipart/form-data"
-              >
+              <form ref={form} onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm text-gray-500 py-2">
@@ -92,6 +118,8 @@ const Contact = () => {
                       className="border-2 rounded-lg p-3 flex border-gray-100"
                       type="text"
                       name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="flex flex-col">
@@ -102,6 +130,8 @@ const Contact = () => {
                       className="border-2 rounded-lg p-3 flex border-gray-100"
                       type="text"
                       name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -113,6 +143,9 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 flex border-gray-100"
                     type="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -123,6 +156,8 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 flex border-gray-100"
                     type="text"
                     name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -133,6 +168,8 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 border-gray-100"
                     rows="10"
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4">
