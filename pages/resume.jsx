@@ -50,7 +50,7 @@ const resume = () => {
         </div>
         <p className="px-2">
           <span className="font-bold">
-            Highly motivated ReactJS Front End Developer with 1.5 years’
+            Highly motivated ReactJS Front End Developer with 2 years’
             experience
           </span>{" "}
           with delivering forward-thinking technological advancements that meet
@@ -96,7 +96,7 @@ const resume = () => {
             <span className="px-2">|</span>Banglore, India
           </p>
           <p className="py-1 italic">
-            Front End Web Developer (2021 - Current)
+            Front End Web Developer (2022 - Current)
           </p>
           <ul className="list-disc list-outside px-7 py-1 leading-relaxed">
             <li>

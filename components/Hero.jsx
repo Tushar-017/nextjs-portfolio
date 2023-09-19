@@ -41,11 +41,16 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="p-1 mt-2 md:pt-4">
+      <div className="p-1 mt-2 md:pt-4 flex gap-0">
         <Link href="/#contact">
           <button className="p-2 text-sm md:text-md md:p-3">
             Get in Touch
           </button>
+        </Link>
+        <Link href="/resume">
+          <p className="p-2 text-sm md:text-md md:p-3 bg-slate-100 cursor-pointer">
+            Resume
+          </p>
         </Link>
       </div>
       <div className="flex items-center justify-start max-w-[330px] sm:m-auto py-2 mt-2 lg:mt-14 md:pt-6 ">

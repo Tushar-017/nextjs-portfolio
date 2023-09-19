@@ -7,6 +7,7 @@ import Projects from "../components/Projects"
 import Skills from "../components/Skills"
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false)
   return (
     <>
       <Head>
@@ -16,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="px-6 md:px-[10%]">
-        <Navbar />
+        <Navbar mode={darkMode} modeFn={setDarkMode} />
         <Hero />
         {/* <Floats className="fixed" /> */}
         {/* <About /> */}

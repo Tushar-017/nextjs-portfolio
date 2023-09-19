@@ -16,7 +16,7 @@ const Navbar = () => {
   }
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="sticky w-full h-20 z-50 dark:bg-gray-700-800">
+      <div className="sticky w-full h-20 z-50 dark:bg-gray-700">
         <div className="flex justify-between items-center w-full h-full  ">
           <div>
             <ul className="hidden md:flex">
@@ -45,11 +45,11 @@ const Navbar = () => {
               <TbMenu2 size={25} />
             </div>
           </div>
-          <BsMoonStars
+          {/* <BsMoonStars
             onClick={() => setDarkMode(!darkMode)}
             size={20}
             color="#7a7a7a"
-          />
+          /> */}
         </div>
         <div
           className={
