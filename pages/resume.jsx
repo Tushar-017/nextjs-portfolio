@@ -50,7 +50,7 @@ const resume = () => {
         </div>
         <p className="px-2">
           <span className="font-bold">
-            Highly motivated ReactJS Front End Developer with 2 years’
+            Highly motivated ReactJS Front End Developer with approx 2 years’
             experience
           </span>{" "}
           with delivering forward-thinking technological advancements that meet
@@ -107,13 +107,10 @@ const resume = () => {
               Troubleshoot issues and concerns, configure operation and analytic
               plugins, and design changes as needed.
             </li>
+            <li>Providing Dockerized react app</li>
             <li>
-              Worked directly with a diverse client base to understand and
-              implement multiple technologies and programs.
-            </li>
-            <li>
-              Optimized components to improve performance such as implementing
-              memoization, optimize web images, etc.
+              Worked with Azure SSO, Google one tap login etc. to be integrated
+              as a login in to the app.
             </li>
           </ul>
         </div>
