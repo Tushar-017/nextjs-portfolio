@@ -30,7 +30,7 @@ const Contact = () => {
         "service_jqr2m2g",
         "template_55hsmxm",
         form.current,
-        "Ur5TBik9S4KuRMUEZ"
+        "5dMqnQV7CtUxV3sLH"
       )
       .then(
         () => alert("Massage sent! Successfully"),
